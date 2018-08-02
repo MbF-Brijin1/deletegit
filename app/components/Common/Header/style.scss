@@ -1,0 +1,18 @@
+@import 'theme/variables';
+@import 'theme/mixins';
+
+header {
+	padding:15px 0px;
+	position: relative;
+	text-align:center;
+	height: 120px;
+	h1{
+		color: $white;
+		font-family: $font-futura;
+		text-transform: uppercase;
+	}
+	.logo{
+		display: inline-block;
+		width:80px;
+	}
+}

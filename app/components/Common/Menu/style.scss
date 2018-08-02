@@ -1,0 +1,17 @@
+@import 'theme/variables';
+@import 'theme/mixins';
+
+.menus{
+	@include position(absolute, $right: 30px,$top:30px);
+	li {
+		display: inline-block;
+		color: $tangerineyellow;
+		cursor: pointer;
+		padding-right: 30px;
+	}
+	.primary_btn {
+		  box-shadow: 4px 4px 0 0 #ff5500;
+		  border-radius: 22px;
+		  @include width-height(108px,50px);
+	}
+}

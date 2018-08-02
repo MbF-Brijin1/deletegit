@@ -1,0 +1,26 @@
+@import 'theme/variables';
+@import 'theme/mixins';
+
+.formblock {
+	padding-bottom: 16px;
+	&:last-child {
+		border-bottom: none;
+	}
+}
+.primary_btn {
+	  box-shadow: 4px 4px 0 0 #ff5500;
+	  border-radius: 22px;
+}
+
+.errorStatus {
+  font-size: 12px;
+  line-height: 15px;
+  color: #d0021b;
+}
+.errorContent {
+	width: 269px;
+	text-align: center;
+	margin: 0 auto;
+	padding-bottom: 10px;
+}
+

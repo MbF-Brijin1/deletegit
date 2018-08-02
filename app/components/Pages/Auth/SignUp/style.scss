@@ -1,0 +1,75 @@
+@import 'theme/variables';
+@import 'theme/mixins';
+
+.divider{
+	position: relative;
+	padding: 15px 0;
+	text-align: center;
+	&:before{
+		position: absolute;
+	    width: 100%;
+	    height: 1px;
+	    background-color:$black;
+	    content: "";
+	    left: 0;
+	    top: 50%;
+	}
+	span{
+		background-color:$white;
+		display: inline-block;
+		position: relative;
+		font:{
+			size:$font-sm;
+		}
+		padding:0 5px;
+	}
+}
+.linkTo{
+	line-height:14px;
+	margin-top:-5px;
+	margin-bottom:20px;
+}
+.formblock {
+	padding-bottom: 16px;
+	@include display-flex;
+	@include justify-content(center)
+	&:last-child {
+		border-bottom: none;
+	}
+}
+.link_test {
+	@include position(absolute,$bottom: 15px,$left: 50%);
+    transform: translateX(-50%);
+	p {
+		padding-bottom: 0px;
+	}
+}
+.primaryBtn {
+  box-shadow: 4px 4px 0 0 $Malachite;
+  border-radius: 22px;
+  width: 324px;
+  margin: 0 auto;
+}
+.searchIcon {
+	position: relative;
+	span {
+		@include position(absolute,$top:14px,$right: 45px);
+		letter-spacing: -0.6px;
+		color: $darkorange;
+		cursor: pointer;
+		font-size: $font-lmd;
+		font-family: $nunito-bold;
+		z-index: 99;
+	}
+}
+.errorStatus {
+  font-size: 12px;
+  line-height: 15px;
+  color: #d0021b;
+}
+.errorContent {
+	width: 269px;
+	text-align: center;
+	margin: 0 auto;
+	padding-bottom: 10px;
+}

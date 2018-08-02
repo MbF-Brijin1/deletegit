@@ -1,0 +1,15 @@
+@import 'theme/variables';
+@import 'theme/mixins';
+
+.formWrapper {
+	min-height: calc(100vh - 250px);
+	padding:70px 0px;
+	position: relative;
+	@include display-flex;
+	@include align-items(center);
+	@include justify-content(center);
+	@include flex-direction(column);
+	h2{
+		padding-bottom: 20px;
+	}
+}

@@ -1,0 +1,54 @@
+@import 'theme/variables';
+@import 'theme/mixins';
+
+.RadioButttonRow {
+	input {
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		opacity: 0;
+		visibility: hidden;
+	}
+	label {
+		cursor: pointer;
+		padding: 10px 0px 10px 50px;
+		position: relative;
+		line-height: 24px;
+		min-height: 55px;
+		@include align-items(center);
+		@include display-flex;
+		&:after, &:before {
+			position: absolute;
+			content:"";
+			top: 50%;
+			@include transform(translateY(-50%));
+		}
+		&:before {
+			@include width-height(36px, 36px);
+			border:1px solid $fm-border-color;
+			border-radius: 100%;
+			left: 0px;
+			@include single-transition(all, 0.2s, ease-in-out);
+		}
+		&:after {
+			@include width-height(10px, 10px);
+			border-radius: 100%;
+		    display: block;
+		    left:13px; 
+		    position: absolute;
+		}
+		&.increaseBottom{
+			margin-bottom: 20px;
+		}
+	}
+	input:checked + label {
+		&:before {
+			background-color: $checkedCheckBoxBgColor;
+		}
+		&:after {
+			background-color: #fff;
+		}
+	}
+}
+
+

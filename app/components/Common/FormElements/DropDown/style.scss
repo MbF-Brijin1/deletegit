@@ -1,0 +1,169 @@
+@import 'theme/variables';
+@import 'theme/mixins';
+.selectMenu{
+	display: inline-block;
+	width: 30%;
+}
+.menuItems {
+	color: #000;
+	margin-left: -10px !important;
+	&:hover {
+		background-color: $red !important;
+		color: $black !important;
+	}
+}
+.dropAlign{
+	margin-bottom: 30px;
+	position: relative;
+	&.reduceBottom{
+		margin-bottom: 0px;
+	}
+}
+
+.menuStyle{
+	height: 70px;
+}
+.helpBlock {
+	color:$form-error-label-bg;
+	display:block;
+	padding:15px 20px;
+	font:{
+		size:$font-sm!important;
+	};
+	letter-spacing:1px;
+	line-height: 20px;
+}
+.multiSelectRowWrap {
+	position: relative;
+	&.active {
+		.multiSelectDropDownWrap {
+			max-height: 240px;
+		}
+	}
+	&.hasError {
+		.multiSelectDropDownWrap {
+			top:-44px;
+		}
+	}
+}
+.multiSelectRow {
+	cursor: pointer;
+	position: relative;
+	&:after, &:before {
+		position:absolute;
+	}
+	&:before {
+		content: "";
+		left:0px;
+		top:0px;
+		right: 0px;
+		bottom: 0px;
+		z-index: 4;
+	}
+	&:after {
+		color: $grey;
+		content:">";
+		font-family: $font-qsbold;
+		font-size:12px;
+		font-weight: 300;
+		right: 20px;
+		top: 13px;
+		@include transform(rotate(90deg));
+	}
+}
+.selectedItems {
+	background-color: $body-bg;
+	position: absolute;
+	left: 2px;
+	padding: 7px 10px;
+	overflow: hidden;
+	top: 6px;
+	z-index: 4;
+	li {
+		background-color: white;
+		float: left;
+		padding: 1px 20px 1px 10px;
+		position: relative;
+		margin-right: 10px;
+		@include border-radius(4px);
+		span {
+			color: $checkedCloseColor;
+			cursor: pointer;
+			line-height: 15px;
+			position: absolute;
+			padding: 5px;
+			right: 0px;
+			top:0px;
+			font:{
+				size:$font-xsm;
+			};
+		}
+	}
+}
+.multiSelectDropDownWrap {
+	max-height: 0px;
+	overflow: auto;
+	@include single-transition(max-height, 0.5s, ease-in-out);
+	position: relative;
+	top: -25px;
+	z-index:5;
+}
+.multiSelectDropDown {
+	border:1px solid $fm-border-color;
+	padding: 10px;
+	background-color: white;
+	border-top:none;
+	> div, li {
+		cursor: pointer;
+		font-size: 14px;
+		margin-bottom: 15px;
+		&:not(:last-child) {
+			border-bottom:1px solid $fm-border-color;
+			padding-bottom: 15px;
+		}
+		&:last-child {
+			margin-bottom: 0px;
+		}
+	}
+}
+
+.hasError, .hasEmpty {
+	margin-bottom: 10px;
+	.formGroupInput, TextArea {
+		border-color:$fm-focus-outline-error;
+	}
+	.formGroupLabel, TextArea {
+		color: $fm-focus-outline;
+		font-size:$font-sm;
+		top:-9px;
+	}
+}
+.formGroupLabel {
+	background-color: $fm-flt-label-bg;
+	color: $fm-flt-label-color;
+	cursor: text;
+	left:7px;
+	padding: 3px 5px;
+	position: absolute;
+	top:14px;
+	@include single-transition(all, 0.15s, ease-in);
+	z-index: 3;
+	line-height: 14px;
+	font-weight: bold;
+}
+.hasSuccess {
+	.formGroupLabel {
+		color: $fm-focus-outline;
+		font-size:$font-sm;
+		top:-9px;
+		text-transform: uppercase;
+	}
+}
+
+@media screen and (max-width: 768px){
+	.dropAlign{
+		&.reduceBottom{
+			margin-bottom: 30px;
+		}
+	}
+}

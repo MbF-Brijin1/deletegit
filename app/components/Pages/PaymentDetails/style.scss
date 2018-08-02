@@ -1,0 +1,78 @@
+@import 'theme/variables';
+@import 'theme/mixins';
+
+.payementWrapper {
+	li {
+		display: inline-block;
+		padding: 35px;
+		vertical-align: top;
+		margin-right: 70px;
+	}
+}
+.formblock {
+	padding-bottom: 16px;
+	&:last-child {
+		border-bottom: none;
+	}
+}
+.link_test {
+	@include position(absolute,$bottom: 15px,$left: 50%);
+    transform: translateX(-50%);
+	p {
+		padding-bottom: 0px;
+	}
+}
+
+.payementBlock {
+	width: 400px;
+}
+.card_Details {
+	padding-bottom: 15px;
+}
+.payementFormat {
+	width: 381px;
+  min-height: 383px;
+  border-radius: 20px;
+  border: solid 1px #6f6b99;
+  padding: 35px;
+  span {
+		font-family: $gothamroundedmedium;
+		font-size: $font-lmd;
+	  line-height: 25px;
+	  color: $navy;
+	}
+}
+.pickerRow {
+	color: red;
+	position: relative;
+}
+
+.errorStatus {
+  font-size: 12px;
+  line-height: 15px;
+  color: #d0021b;
+}
+.errorContent {
+	width: 269px;
+	text-align: center;
+	margin: 0 auto;
+	padding-bottom: 10px;
+}
+.primaryBtn {
+  box-shadow: 4px 4px 0 0 #ff5500;
+  border-radius: 22px;
+}
+@media screen and (max-width: 1024px) {
+	.payementWrapper li {
+		margin-right: 0px;
+	}
+}
+
+@media screen and (max-width: 640px) {
+	.payementWrapper {
+		padding: 50px 15px;
+	}
+	.payementFormat {
+		width: 100%;
+	}
+}

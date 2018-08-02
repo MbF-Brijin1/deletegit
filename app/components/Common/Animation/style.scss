@@ -1,0 +1,12 @@
+@import 'theme/variables';
+@import 'theme/mixins';
+
+.fadeElement {
+	opacity: 0;
+	visibility: hidden;
+	@include single-transition(all 0.5s linear 1s);
+}
+.activeElement {
+	opacity: 1;
+	visibility: visible;
+}

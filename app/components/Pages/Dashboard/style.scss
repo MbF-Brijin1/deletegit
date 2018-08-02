@@ -1,0 +1,72 @@
+@import 'theme/variables';
+@import 'theme/mixins';
+
+.dashboardWrapper {
+	background-image: linear-gradient(to bottom, #310747, #130747);
+	width: 100%;
+	position: relative;
+	padding: 0px 15px;
+	@include display-flex;
+	@include justify-content(space-between);
+	@include align-items(center);
+	@include flex-direction(column);
+	@include width-height(100%, 946px);
+	figure {
+		justify-content: flex-end;
+		margin-bottom: 0px;
+	}
+}
+.dashbordContent {
+	@include display-flex;
+	@include justify-content(center);
+	@include align-items(center);
+	@include flex-direction(column);
+	p {
+		color: $white;
+		text-align: center;
+		width: 555px;
+		line-height: 30px;
+	}
+	ul {
+		padding-bottom: 20px;
+	}
+	li {
+		display: inline-block;
+		padding-right: 15px;
+	}
+}
+
+.primary_btn {
+  box-shadow: 4px 4px 0 0 #ff5500;
+  border-radius: 22px;
+  margin-bottom: 30px;
+  @include width-height(324px,48px);
+}
+
+.formblock {
+	padding-bottom: 16px;
+	&:last-child {
+		border-bottom: none;
+	}
+}
+
+.errorStatus {
+  font-size: 12px;
+  line-height: 15px;
+  color: #d0021b;
+}
+.errorContent {
+	width: 269px;
+	text-align: center;
+	margin: 0 auto;
+	padding-bottom: 10px;
+}
+
+@media screen and (max-width: 640px) {
+	.dashbordContent p {
+		width: 100%;
+	}
+	.primary_btn {
+		width: 100%;
+	}
+}

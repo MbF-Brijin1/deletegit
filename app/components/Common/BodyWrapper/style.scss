@@ -1,0 +1,12 @@
+@import 'theme/variables';
+@import 'theme/mixins';
+
+.outer_wrapper {
+	background-color: $navy;
+	width: 100%;
+	min-height: 100vh;
+	padding:50px 15px;
+	@include display-flex;
+	@include align-items(center);
+	@include justify-content(center);
+}

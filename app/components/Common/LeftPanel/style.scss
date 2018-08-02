@@ -1,0 +1,93 @@
+@import 'theme/variables';
+@import 'theme/mixins';
+
+%hide{
+	opacity:0;
+	visibility: hidden;	
+}
+
+.leftContent{ 
+	height: 100%;
+	@include display-flex;
+	@include flex-direction(column);
+	@include justify-content(space-between);
+	.sidebarContainer {
+		background-color:$white;
+		padding-top: 60px;
+		width: 100%;
+		ul {
+			a {
+				color: $navLinkColor;
+				display: block;
+				font-size: $font-sm;
+				font-family: $font-futura;
+				letter-spacing:2px;
+				padding: 15px 20px 15px 70px;
+				position:relative;
+				text-transform: capitalize;
+				&:before {
+					@include width-height(25px, 25px);
+					@include position(absolute, $left: 20px, $top: 50%);
+					@include transform(translateY(-50%));
+					font-family: $font-awesome; 
+					font-weight:900;
+				}
+				&:after {
+					content:'\f105';
+					color: $red;
+					font-family: $font-awesome;
+					font-size: $font-sm;
+					font-weight: 900;
+					@include position(absolute, $right: 20px, $top: 50%);
+					@include transform(translateY(-50%));
+					transition: all .5s ease-in-out;
+				}
+				span {
+					transition: all .5s ease-in-out;
+				}
+				&.icon {
+					&Analyst {
+						&:before {
+							content:'\f557';
+							
+						}
+						&.hideNav{
+							height: 60px;
+							&:after, span{
+								@extend %hide;
+							}
+						}
+					}
+					&Bio {
+						&:before {
+							content:'\f038';
+						}						
+						&.hideNav{
+							height: 60px;
+							&:after, span{
+								@extend %hide;
+							}
+						}
+					}
+					&Reports {
+						&:before {
+							content:'\f038';
+						}
+						&.hideNav{
+							height: 60px;
+							&:after, span{
+								@extend %hide;
+							}
+						}
+					}
+				}
+				&:hover, &.active {
+					background-color: $body-bg;
+					&:after {
+						display:block;
+					}
+				}
+			}
+		}
+	}
+}

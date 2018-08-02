@@ -1,0 +1,11 @@
+@import 'theme/variables';
+@import 'theme/mixins'; 
+
+.close_Icon {
+	@include position(absolute, $top:46px,$right: 55px);
+	cursor: pointer;
+	.close-icon {
+		color: $darkorange;
+		font-size: $font-amf;
+	}
+}

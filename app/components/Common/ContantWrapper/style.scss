@@ -1,0 +1,14 @@
+@import 'theme/variables';
+@import 'theme/mixins';
+
+.infoWrapper {
+	width: 324px;
+  border-radius: 20px;
+  box-shadow: 4px 4px 0 0 #6f6b99;
+  background-color: $white;
+  border: solid 1px rgba(111, 107, 153, 0.8);
+  &.errorStatus{
+  	box-shadow: 4px 4px 0 0 #d0021b;
+  	border: solid 1px #d0021b;
+  }
+}

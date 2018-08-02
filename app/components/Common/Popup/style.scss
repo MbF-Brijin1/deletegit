@@ -1,0 +1,48 @@
+@import 'theme/variables';
+@import "theme/main";
+
+.popupWrapper{
+	background:{
+		color:rgba(18, 0, 71, 0.8);
+	}
+	left:0;
+	position:fixed;
+	top:0;
+	@include  width-height(100%, 100%);
+	@include display-flex;
+	@include align-items(center);
+	@include justify-content(center);
+	z-index:999;
+}
+
+.popupContainer{
+	position: relative;
+	padding:40px 50px;
+	text-align: center;
+	width: 636px;
+  height: 441px;
+  border-radius: 20px;
+  background-color: $white;
+  box-shadow: 4px 4px 0 0 rgba(255, 255, 255, 0.5);
+  @include display-flex;
+  @include flex-direction(column);
+  @include align-items(center);
+  @include justify-content(center);
+	img{
+		z-index: 0;
+	}
+	&.whitebg{
+		background-color: $white;
+	}
+	&.videoPopup{
+		max-width:850px;
+	}
+	a {
+		@include position(absolute,$top:32px,$right:32px);
+	}
+	p {
+		width: 326px;
+		margin: 0 auto;
+	}
+}
+

@@ -1,0 +1,124 @@
+@import 'theme/variables';
+@import 'theme/mixins';
+
+.formGroup {
+	border-bottom:1px solid rgba(60, 0, 102, 0.06);
+	position:relative;
+	z-index: 1;
+	&.reduceBottom{
+		margin-bottom: 15px;
+	}
+	&Input{
+		&.disabledColor{
+			background-color: $white!important;
+		}
+	}
+	&Label, &Input, &TextArea {
+		font:{
+			family:$nunitosemiBold;
+			size:$font-msd;
+		}
+		color:$navy;
+		line-height: 1.4;
+  		letter-spacing: -0.2px;
+	}
+	&Label {
+		background-color: $fm-flt-label-bg;
+		color: $scampi;
+		cursor: text;
+		left:15px;
+		opacity: 0.5;
+		padding: 3px 5px;
+		position: absolute;
+		top:15px;
+		@include single-transition(all, 0.15s, ease-in);
+		z-index: 3;
+		line-height: 14px;
+		margin-bottom:0;
+		letter-spacing:0.5px;
+	}
+	&Input, &TextArea {
+		border:none;
+		border-radius: 20px;
+		background-color:$white;
+		padding: 0 15px;
+		@include width-height(100%, 44px);
+		@include single-transition(border, 0.15s, ease-in);
+		&:focus {
+			font-size:$font-msd;
+		}
+	}
+	&TextArea {
+		height:100px;
+		padding-top:10px;
+		resize:none;
+		vertical-align: middle;
+	}
+	&Input:focus ~ &Label, &TextArea:focus ~ &Label {
+		color: $fm-focus-outline;
+		font-size:$font-sm;
+		top:-9px;
+	}
+	&.memberInput{
+		.formGroup{
+			&Input {
+				border:$fm-border-thickness solid $red;
+				color: white;
+				&:focus {
+					border-color:$red;
+				}
+			}
+			&Label {
+				background-image: url(/assets/images/pattern.png);
+				background-size: 14%;
+				background-color: black;
+				color: $white;
+			}
+		}
+	}
+}
+
+.hasError, .hasEmpty {
+	.formGroupInput, TextArea {
+		border-color:red;
+		background-image: url('/assets/images/erroricon.png');
+		background-position: 95% 50%;
+		background-size: 25px;
+		background-repeat: no-repeat;
+		padding-right: 50px;
+		/*position: absolute;
+		right: 16px;
+		top: 18px;
+		z-index: 9;
+		height: 14px;
+		width: 16px;*/
+	}
+	.info_wrapper {
+		border: solid 1px red;
+		background-color: red;
+	}
+	.formGroupLabel, TextArea {
+		color: $fm-focus-outline;
+		font-size:$font-sm;
+		top:-9px;
+	}
+}
+.hasSuccess {
+	.formGroupLabel {
+		color: $fm-focus-outline;
+		font-size:$font-sm;
+		top:-9px;
+	}
+}
+.helpBlock {
+	color:$white!important;
+	background-color: $form-error-label-bg;
+	display:block;
+	padding:6px 20px;
+	font:{
+		size:$font-sm!important;
+	};
+	letter-spacing:1px;
+	line-height: 20px;
+}
+

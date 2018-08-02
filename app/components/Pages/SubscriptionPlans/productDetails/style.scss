@@ -1,0 +1,92 @@
+@import 'theme/variables';
+@import 'theme/mixins';
+
+
+.SubscribeDetails {
+	position: relative;
+	padding: 30px 40px;
+	display: inline-block;
+  width: 380px;
+  vertical-align: top;
+	&:after {
+		content:'';
+	  opacity: 0.2;
+	  background-color: $Indigo;
+	  @include position(absolute, $right:0px,$top:0px);
+	  @include width-height(1px, 475px);
+	}
+	.infoPlans {
+		font-size: $font-lmd;
+		font-family:$gothamrounded-book;
+		line-height: 25px;
+		opacity: 0.8;
+  	color: $navy;
+  	border-bottom: 1px solid rgba(60, 0, 102, 0.18);
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+	}
+	li {
+		color: $navy;
+		font-size: $font-lmd;
+		font-family: $gothamroundedmedium;
+		padding: 10px;
+		line-height: 19px;
+	}
+	ul {
+		padding-bottom: 25px;
+	}
+	span {
+		font-family: $gothamroundedmedium;
+		font-size: $font-lmd;
+	  line-height: 25px;
+	  color: $navy;
+	}
+}
+.subscribeTab {
+	padding-bottom: 25px;
+	@include display-flex;
+	@include justify-content(center);
+	li {
+		display: inline-block;
+		color: $Indigo;
+		cursor: pointer;
+		font-family: $gothamroundedmedium;
+		padding: 10px 53px;
+		width: 50%;
+		&.active {
+			background-color: $tangerineyellow;
+		}
+	}	
+	ul {
+		border: 1px solid ;
+		height: 44px;
+	  border-radius: 22px;
+	  border: solid 1px $tangerineyellow;
+		width: 343px;
+		overflow: hidden;
+	}
+}
+@media screen and (max-width: 1200px) {
+	.SubscribeDetails {
+		width: 50%;
+		&:last-child:after {
+			display: none;
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.SubscribeDetails {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.subscribeTab {
+		padding:50px 15px 30px;
+	}
+}
+
+
+
+

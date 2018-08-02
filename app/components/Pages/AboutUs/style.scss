@@ -1,0 +1,19 @@
+.baseContainer{
+	color: white;
+	background-color:gray;
+	padding: 10px;
+}
+.arrTable{
+	color: black;
+	background-color: #33E3FF;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin-bottom: 10px;
+	border-radius: 20px;
+	padding: 20px;
+}
+.price{
+	display: flex;
+	flex-direction: row;
+}

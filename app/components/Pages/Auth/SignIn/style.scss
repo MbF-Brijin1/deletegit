@@ -1,0 +1,68 @@
+@import 'theme/variables';
+@import 'theme/mixins';
+
+.divider{
+	position: relative;
+	padding: 15px 0;
+	text-align: center;
+	&:before{
+		position: absolute;
+	    width: 100%;
+	    height: 1px;
+	    background-color:$black;
+	    content: "";
+	    left: 0;
+	    top: 50%;
+	}
+	span{
+		background-color:$white;
+		display: inline-block;
+		position: relative;
+		font:{
+			size:$font-sm;
+		}
+		padding:0 5px;
+	}
+}
+.linkTo{
+	line-height:14px;
+	padding: 25px;
+	a {
+		color: $darkorange;
+		cursor: pointer;
+		font-size: $font-md;
+	}
+}
+.formblock {
+	padding-bottom: 16px;
+	&:last-child {
+		border-bottom: none;
+	}
+}
+.linkTest {
+	@include position(absolute,$bottom: 15px,$left: 50%);
+    transform: translateX(-50%);
+	p {
+		padding-bottom: 0px;
+	}
+}
+.primaryBtn {
+  box-shadow: 4px 4px 0 0 #ff5500;
+  border-radius: 22px;
+}
+.forgot_Password {
+	width: 325px;
+	margin:0 auto;
+}
+
+.errorStatus {
+  font-size: 12px;
+  line-height: 15px;
+  color: #d0021b;
+}
+.errorContent {
+	width: 269px;
+	text-align: center;
+	margin: 0 auto;
+	padding-bottom: 10px;
+}

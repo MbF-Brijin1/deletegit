@@ -1,0 +1,138 @@
+@import 'theme/variables';
+@import 'theme/mixins';
+
+.privacyWrapper {
+	background-color: $white;
+	height: 100%;
+	@include display-flex;
+	@include justify-content(center);
+	@include align-items(center);
+	position: relative;
+	.privacyBlock {
+		position: relative;
+		padding: 30px;
+		width: 1200px;
+  	height: 900px;
+	}
+	.info_Content {
+		padding-bottom: 50px;
+	}
+	h2 {
+		text-align: center;
+		padding-right: 50px;
+	}
+}
+.privacy_Content {
+	counter-reset: my-sec-counter;
+	li {
+		position: relative;
+		padding-left: 30px;
+		color: $namecoralred;
+	  letter-spacing: -0.9px;
+	  font-size: 22px;
+	  &:before {
+			background-color: $navy;
+			border-radius: 100%;
+			counter-increment: my-sec-counter;
+    	content:counter(my-sec-counter);
+			color: $white;
+			text-align: center;
+			font-size: $font-lmd;
+			@include position(absolute, $left:-15px,$top: 0px);
+			@include width-height(32px,32px);
+			line-height: 32px;
+		}
+		p {
+	    opacity: 0.8;
+	    font-size: 18px;
+	    line-height: 24px;
+	    padding-bottom: 10px;
+	    width: 610px;
+	  }
+	}
+	
+}
+
+.agreementSection {
+	background-color: $navy;
+	border-radius: 22px;
+	padding: 30px;
+	@include display-flex;
+	@include justify-content(flex-end);
+	@include align-items(center);
+	@include width-height(381px,251px);
+	@include flex-direction(column);
+	.primaryBtn {
+	  box-shadow: 4px 4px 0 0 #ff5500;
+	  border-radius: 22px;
+	  width: 100%;
+	}
+	.conformBtn {
+		width: 100%;
+	}
+	li {
+		color: $white;
+		padding: 0px 0px 15px 30px;
+	  font-size: 17px;
+	  line-height: 1.41;
+	  letter-spacing: -0.4px;
+	  position: relative;
+		a {
+			color: $tangerineyellow;
+			cursor: pointer;
+			&:hover {
+				color:$namecoralred;
+			}
+		}
+	}
+}
+.checkedBox {
+	position: absolute;
+  left: 0px;
+  top: -4px;
+}
+
+
+@media screen and (max-width: 1200px) {
+	
+	.agreementSection {
+		@include width-height(100%,auto);
+	}
+	.privacy_Content li p {
+		width: 100%;
+	}
+}
+@media screen and (max-Width: 768px) {
+	.privacyWrapper {
+		[class*="col-"] {
+			max-width: 100%;
+    	-webkit-flex: 100%;
+    	flex: 100%;
+		}
+	}
+	.agreementSection {
+		@include width-height(381px,auto);
+		margin: 0 auto;
+	}
+	
+}
+@media screen and (max-Width: 768px) {
+	.privacyWrapper {
+		[class*="col-"] {
+			max-width: 100%;
+    	-webkit-flex: 100%;
+    	flex: 100%;
+		}
+	}
+	.agreementSection {
+		@include width-height(381px,auto);
+		margin: 0 auto;
+	}
+}
+
+@media screen and (max-Width: 468px) {
+	.agreementSection {
+		@include width-height(100%,auto);
+		margin: 0 auto;
+	}
+}

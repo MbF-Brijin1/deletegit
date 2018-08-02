@@ -1,0 +1,18 @@
+@import 'theme/variables';
+@import 'theme/mixins';
+
+.globalMessage {
+	background: $red;
+	color: white;
+	font-size: $font-md;
+	padding: 10px 0px;
+	text-align: center;
+	position: fixed;
+	z-index: 9999;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	&.successMessage{
+		background: #34bf3a;
+	}
+}

@@ -1,0 +1,152 @@
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px white inset;
+}
+.fa, .fas, .fal {
+    font-weight: 900;
+}
+.fa, .far, .fas, .fal {
+    font-family: "Font Awesome 5 Free";
+}
+.Select-menu-outer{
+	z-index: 999;
+}
+.Select-input input {
+  padding: 15px 0px;
+}
+.radio{
+	display: flex;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;			
+	padding-bottom: 20px;
+}
+
+Select{
+	@include single-transition(all, 0.15s, ease-in);
+}
+.revealerWrapper{
+	position: relative;
+}
+.revealerWrapper #password {
+	background-image: none;
+}
+.revealerWrapper .revealerDefault{
+	background-image: url('/assets/images/Showpassworddefault.png');
+}
+.revealerWrapper .passwordRevealer{
+	background-image: url('/assets/images/Showpasswordactive.png');
+}
+.revealerWrapper .passwordRevealerOn{
+	background-image: url('/assets/images/Showpassworddeactive.png');
+}
+.revealerWrapper .passwordRevealer, .passwordRevealerOn, .revealerDefault{
+	background-size: 100%;
+	background-repeat: no-repeat;
+	cursor: pointer;
+	position: absolute;
+	right: 16px;
+	top: 18px;
+	z-index: 9;
+	height: 14px;
+	width: 16px;
+}
+.accordionBlock{
+	border-bottom:1px solid #C1C0C2;
+	position: releative;
+	padding-top:15px;
+	cursor: pointer;
+}
+.accordionBlock h5{ position: relative; } 
+.accordionBlock h5:before{
+	content: "\f107";
+	color:#C1C0C2;
+	position: absolute;
+	font-family: "Font Awesome 5 Free"; 
+	font-weight: 900; 
+	display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+	width:30px;
+	height:30px;
+    right: 0;
+    top:50%;
+    margin-top:-20px; text-align: center; line-height:30px; -webkit-transition: all .25s ease;
+       -moz-transition:all .25s ease;
+        -ms-transition:all .25s ease;
+         -o-transition:all .25s ease;
+            transition:all .25s ease;
+}
+.accordionContent{ display: none; padding-bottom:15px}
+.accordionBlock.accordionActive h5:before{
+	-webkit-transform:rotate(-180deg);
+	   -moz-transform:rotate(-180deg);
+	    -ms-transform:rotate(-180deg);
+	     -o-transform:rotate(-180deg);
+	        transform:rotate(-180deg);
+}
+.dashboardContainer{
+	background-color:#fff;
+	padding: 0 15px;
+}
+.collaps-menu {
+	min-height: calc(100vh);
+	position: relative;
+}
+.collaps-menu .row {
+	min-height: inherit;
+}
+.collaps-menu .leftNav {
+	background-color:#fff;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 274px;
+	transition: all .3s ease-in;
+	height: calc(100vh);
+}
+.collaps-menu .rightNav {
+	background-color:#fcfbfb;
+	flex: 100%;
+	max-width: 100%;
+	margin-left: 274px;
+	padding:30px;
+	transition: all .3s ease-in;
+
+}
+.collaps-menu.collapsActive .leftNav {
+	width: 0px;
+}
+
+.collaps-menu.collapsActive .rightNav {
+	margin-left:85px;
+}
+.whiteBg {
+	background-color: #fff;
+}
+.dashboardContainer .col-2, .col-10{
+	padding:0px;
+}
+.topColumn {
+	padding-bottom: 40px;
+	border-bottom: 3px solid #d5d5d5;
+}
+
+.linkTest {
+	position:absolute;
+	bottom: 15px;
+	left: 50%;
+    transform: translateX(-50%);
+}
+.linkTest p {
+	padding-bottom: 0px;
+}
+
+@media screen and (max-width: 468px) {
+	h2 {
+		font-size: 28px;
+		line-height: 38px;
+	}
+}

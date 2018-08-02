@@ -1,0 +1,26 @@
+@import 'theme/variables';
+@import 'theme/mixins';
+
+.contant_wrapper {
+	background-color: $white;
+	border-radius: 20px;
+	@include display-flex;
+	@include justify-content(center);
+	@include flex-direction(column);
+	@include align-items(center);
+	width: 1140px;
+	min-height: 690px;
+	/*@include box-shadow(4px 4px 0 0 rgba(255, 255, 255, 0.5));*/
+	box-shadow: 4px 4px 0 0 rgba(255, 255, 255, 0.5);
+	text-align: center;
+	align-items: center;
+	position: relative;
+	margin: 0 auto;
+	padding: 30px 0;
+}
+
+@media screen and (max-width: 1200px) {
+	.contant_wrapper {
+		width: 100%;
+	}
+}

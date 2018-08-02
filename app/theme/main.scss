@@ -1,0 +1,108 @@
+@import 'theme/variables';
+@import 'theme/fonts';
+@import 'theme/mixins';
+
+html, body, p, h1, h2, h3, h4, h5, h6, form, ol, ul {
+	padding:0px;
+	margin:0px;
+}
+
+html,
+body {
+  -webkit-overflow-scrolling: touch;
+  box-sizing: border-box;
+  color: $dodgerblue;
+}
+body {
+	background-color:$white;
+	color:$black;
+	font:{
+    family: $nunitosemiBold;
+		size:$font-xmd;
+		weight: normal;
+	};
+	line-height:1.33;
+}
+
+a {
+  color: $link-color !important;
+  cursor: pointer;
+  font:{
+  	family: $nunito-bold;
+  }
+  @include transition-property(all);
+  @include transition-duration(.2s);
+  @include transition-timing-function(linear);
+  &:hover, &:focus{
+    color: $navy;
+    outline:none;
+    text-decoration: none;
+  }
+}
+img {
+	max-width: 100%;
+	vertical-align: middle;
+}
+ul, ol {
+	list-style:none;
+}
+h2{
+  font:{
+    size: $font-dmh;
+  }
+  color: $namecoralred;
+  letter-spacing: -1.8px;
+  line-height: 58px;
+  text-align: center;
+  padding-bottom: 5px;
+}
+h3 {
+  font:{
+    size: $font-ame;
+  }
+  line-height: 1;
+  letter-spacing: -0.9px;
+  padding-bottom: 20px;
+}
+
+h2,h3,h4,h5,h6{
+ color: $namecoralred;
+}
+p {
+  color: $navy;
+  padding-bottom: 15px;
+  opacity: 0.8;
+}
+header {
+  height: 85px;
+  position: relative;
+  padding-bottom: 30px;
+  width: 100%;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline:none;
+}
+::-webkit-input-placeholder {
+  font:{
+    family: $nunitosemiBold;
+    size: $font-md;
+  }
+  color: $scampi;
+  letter-spacing: -0.2px;
+  opacity: 0.9;
+}
+
+.errorContent {
+  width: 269px;
+  text-align: center;
+  margin: 0 auto;
+  padding-bottom: 10px;
+}
+
+.primaryBtn {
+  box-shadow: 4px 4px 0 0 #ff5500;
+  border-radius: 22px;
+}
+
+

@@ -1,0 +1,23 @@
+@import 'theme/variables';
+@import 'theme/mixins';
+
+.tabRow{
+	position: relative;
+	ul{
+		border-bottom:2px solid $grey;
+	}
+	li{
+		cursor: pointer;
+		float: left;
+		padding:10px 15px;
+		margin-bottom:-2px;
+		border-bottom:2px solid transparent;
+		&.active{
+			color:$red;
+			border-bottom:2px solid $red;
+		}
+	}
+}
+.tabContentWrap{
+	padding:15px;
+}
